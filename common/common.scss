@@ -1,0 +1,31 @@
+@import "variables";
+
+// FONTS
+@font-face {
+    font-family: "adobe-clean";
+    src: url("assets/fonts/AdobeClean-Regular.otf") format("opentype");
+}
+
+html {
+    color: var(--text-color);
+    font-family: "adobe-clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+}
+
+// BANNER (Custom search)
+.custom-search-banner {
+    color: #fff;
+    .search-input {
+        width: 408px;
+        height: 33px;
+        border: none;
+        padding: 0 2rem 0 1rem;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.35);
+        border-radius: 16px;
+        opacity: 1;
+        ::placeholder {
+            color: pink;
+        }
+    }
+}

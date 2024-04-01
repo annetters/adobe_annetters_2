@@ -1,0 +1,34 @@
+:root {
+    // COLORS
+    // Base
+    --text-color: var(--primary); 
+
+    // Adobe Spectrum palette
+    --spectrum-global-color-static-gray-50: white;
+    --spectrum-global-color-static-gray-75: white;
+    --spectrum-global-color-static-gray-100: white;
+    --spectrum-global-color-static-gray-200: #f4f4f4;
+    --spectrum-global-color-static-gray-300: #eaeaea;
+    --spectrum-global-color-static-gray-400: lightgray;
+    --spectrum-global-color-static-gray-500: #bcbcbc;
+    --spectrum-global-color-static-gray-600: #959595;
+    --spectrum-global-color-static-gray-700: #747474;
+    --spectrum-global-color-static-gray-800: #505050;
+    --spectrum-global-color-static-gray-900: #323232;
+    --spectrum-global-color-static-blue-400: #378ef0;
+    --spectrum-global-color-static-blue-500: #2680eb;
+    --spectrum-global-color-static-blue-600: #1473e6;
+    --spectrum-global-color-static-blue-700: #0d66d0;
+    --spectrum-global-color-static-red-400: #ec5b62;
+    --spectrum-global-color-static-red-500: #e34850;
+    --spectrum-global-color-static-red-600: #d7373f;
+    --spectrum-global-color-static-red-700: #c9252d;
+    --spectrum-global-color-static-orange-400: #f29423;
+    --spectrum-global-color-static-orange-500: #e68619;
+    --spectrum-global-color-static-orange-600: #da7b11;
+    --spectrum-global-color-static-orange-700: #cb6f10;
+    --spectrum-global-color-static-green-400: #33ab84;
+    --spectrum-global-color-static-green-500: #2d9d78;
+    --spectrum-global-color-static-green-600: #268e6c;
+    --spectrum-global-color-static-green-700: #12805c;
+}
