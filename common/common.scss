@@ -3,7 +3,7 @@
 // FONTS
 @font-face {
     font-family: "adobe-clean";
-    src: url("assets/fonts/AdobeClean-Regular.otf") format("opentype");
+    src: url("/fonts/AdobeClean-Regular.otf") format("opentype");
 }
 
 html {
@@ -12,9 +12,51 @@ html {
     font-size: 16px;
 }
 
+// BUTTONS
+.btn {
+    background: var(--spectrum-global-color-static-gray-300);
+    border-radius: var(--d-nav-pill-border-radius);
+    color: var(--button-text-color-dark);
+    font-size: var(--font-down-1);
+    font-weight: 700;
+    height: 30px;
+    padding: 0.5rem 1rem;
+    .d-icon {
+        color: inherit;
+    }
+}
+.btn#create-topic {
+    background: var(--spectrum-global-color-static-blue-600);
+    color: var(--button-text-color-light);
+    &:hover {
+        background: var(-spectrum-global-color-static-blue-700);
+    }
+}
+.nav-pills > li {
+    align-items: center;
+    > a {
+        @extend .btn;
+    }
+}
+.nav-pills>li a.active, 
+.nav-pills>li button.active {
+    background: transparent;
+    color: var(--text-color);
+}
+
+// TOPIC-LIST
+.topic-list a.title {
+    font-size: var(--font-down-1);
+    font-weight: 700;
+}
+
 // BANNER (Custom search)
 .custom-search-banner {
+    background: #c49dfe url("assets/images/adobe-search-bg.svg");
+    background-size: cover;
+    background-position: center;
     color: #fff;
+    height: 250px;
     .search-input {
         width: 408px;
         height: 33px;

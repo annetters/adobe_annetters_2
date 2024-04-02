@@ -14,13 +14,14 @@
       "primary": "2c2c2c",
       "secondary": "ffffff",
       "tertiary": "2680eb",
-      "quaternary": "e45735",
+      "quaternary": "2680eb",
       "header_background": "ffffff",
       "header_primary": "2c2c2c", 
       "highlight": "ffff4d",
       "danger": "d7373f",
       "success": "33ab84",
-      "love": "fd83fa"
+      "love": "fd83fa",
+      "primary-low": "2680eb"
     }
   },
   "modifiers": {

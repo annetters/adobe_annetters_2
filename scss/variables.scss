@@ -1,4 +1,12 @@
 :root {
+    // BUTTONS
+    --d-nav-pill-border-radius: 1rem;
+    --button-bg-color-light: #fff;
+    --button-bg-color-dark: #222;
+    --button-text-color-light: #fff;
+    --button-text-color-dark: var(--primary);
+
+
     // COLORS
     // Base
     --text-color: var(--primary); 
