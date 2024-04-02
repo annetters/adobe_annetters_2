@@ -8,6 +8,8 @@
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {
+    "font-adobe-clean": "assets/fonts/AdobeClean-Regular.otf",
+    "bg-search-main": "assets/images/adobe-search-bg.svg"
   },
   "color_schemes": {
     "Default": {

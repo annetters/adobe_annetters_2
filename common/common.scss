@@ -1,9 +1,14 @@
 @import "variables";
 
+// FONTS
+@font-face {
+    font-family: "adobe-clean";
+    src: url($font-adobe-clean) format("opentype");
+}
+
 html {
     color: var(--text-color);
-    //font-family: "adobe-clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-family: "consolas";
+    font-family: "adobe-clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Cambria, sans-serif;
     font-size: 16px;
 }
 
@@ -47,6 +52,7 @@ html {
 
 // BANNER (Custom search)
 .custom-search-banner {
+    //background: #c49dfe url($bg-search-main);
     background: #c49dfe url("assets/images/adobe-search-bg.svg");
     background-size: cover;
     background-position: center;
