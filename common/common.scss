@@ -18,19 +18,19 @@ html {
     font-size: 1rem;
     font-weight: 700;
     height: 30px;
-    .d-icon {
+    &:active {
         color: inherit;
+        .d-icon {
+            color: inherit;
+        }
     }
 }
-.btn-default {
-    background: var(--spectrum-global-color-static-gray-300);
-    border-radius: var(--d-nav-pill-border-radius);
-    padding: 0.5rem 1rem;
-}
 
-.btn#create-topic {
+.btn-default {
     background: var(--spectrum-global-color-static-blue-600);
+    border-radius: var(--d-nav-pill-border-radius);
     color: var(--button-text-color-light);
+    padding: 0.5rem 1rem;
     &:hover {
         background: var(-spectrum-global-color-static-blue-700);
     }
@@ -48,8 +48,25 @@ html {
 .nav-pills>li a.active, 
 .nav-pills>li button.active {
     background: var(--spectrum-global-color-static-gray-300);
-
     color: var(--text-color);
+}
+
+// HEADER 
+.d-header #site-logo {
+    height: 24px;
+}
+
+.d-header-icons {
+    .icon {
+        color: var(--spectrum-global-color-static-gray-700);
+        img.avatar {
+            width: var(-font-up-2);
+            height: var(-font-up-2);
+        }
+    }
+    .d-icon {
+        font-size: var(-font-up-2);
+    }
 }
 
 // TOPIC-LIST
@@ -61,10 +78,11 @@ html {
 // BANNER (Custom search)
 .custom-search-banner {
     //background: #c49dfe url($bg-search-main);
-    background: #c49dfe url("assets/images/adobe-search-bg.svg");
+    background: #c49dfe url($bg-search-main);
     background-size: cover;
     background-position: center;
     color: #fff;
+    display: flex;
     height: 250px;
     h1 {
         font-size: 28px;
@@ -80,11 +98,8 @@ html {
         box-shadow: 0px 1px 4px rgba(0,0,0,0.35);
         border-radius: 16px;
         opacity: 1;    
-        @media(min-width: $medium-width) {
-            width: 400px;
-        }
         ::placeholder {
-            color: var(--spectrum-global-color-static-gray-700);
+            color: var(--spectrum-global-color-static-gray-600);
             font-style: italic;
         }
     }
