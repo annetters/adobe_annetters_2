@@ -46,8 +46,8 @@ html, h1, h2, h3, h4, h5, h6 {
 }
 .btn.login-button {
     background: transparent;
-    border: 2px var(--spectrum-global-color-static-gray-300) solid;
-    color: var(--spectrum-global-color-static-gray-300);
+    border: 2px var(--spectrum-global-color-static-gray-700) solid;
+    color: var(--spectrum-global-color-static-gray-700);
 }
 
 .nav-pills > li {
@@ -78,6 +78,10 @@ html, h1, h2, h3, h4, h5, h6 {
 }
 .d-header #site-logo {
     height: 24px;
+}
+
+.d-header .header-buttons {
+    margin-top: 0;
 }
 
 .d-header-icons {
@@ -187,6 +191,22 @@ tr {
         :nth-child(3) {
             margin: initial;
             order: 2;
+        }
+    }
+}
+
+// CATEGORY TITLE HEADER (custom component)
+.category-title-header {
+    background: var(----spectrum-global-color-static-gray-300) !important;
+    color: var(--primary) !important;
+    padding: 1.75rem 0;
+    .category-title-contents {
+        max-width: var(--d-max-width);
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 var(--d-wrap-padding-h);
+        .category-logo {
+            max-height: 48px;
         }
     }
 }
