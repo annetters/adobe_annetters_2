@@ -1,0 +1,151 @@
+<script type="text/discourse-plugin" version="0.8">
+    const Category = require("discourse/models/category").default;
+    // we will use the Category model to retrieve site categories
+  
+    api.registerConnectorClass('above-main-container', 'featured-categories', {
+      // above-main-container is the plugin outlet,
+      // featured-topics is your custom component name
+  
+      setupComponent(args, component) {
+  
+        api.onPageChange((url, title) => {
+          console.log(url,title)
+          if ((url === "/") || (url === "/latest") ) {
+          // on page change, check if url matches
+          // if your homepage isn't /latest change this to /categories
+          
+            $('html').addClass('custom-featured-categories');
+            // add a class to the HTML tag for easy CSS targetting
+  
+            let definedFeaturedCategories = ["uncategorized","blog","two"]
+            // array of categories you want to feature
+            // be sure to put the category titles in lowercase
+  
+            let featuredCategories = [];
+  
+            categories = Category.list();
+  
+            for (let cat of categories) {
+              if (definedFeaturedCategories.includes(cat.name.toLowerCase())) {
+                // only pushes categories you want to feature into the array to be rendered
+                featuredCategories.push(cat)
+              }
+            }
+  
+            component.set('featuredCategories', featuredCategories)
+  
+          } else {
+  
+          // If the page doesn't match the urls above, do this:
+            $('html').removeClass('custom-featured-categories');
+            // Remove our custom class
+            component.set('categories',[])
+            // set the categories to an empty array to disable rendering
+          }
+        });
+      }
+    });
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="/connectors/above-main-container/featured-categories">
+    <div class="custom-featured-categories-wrapper">
+      {{categories-wrapper categories=featuredCategories}}
+        <!-- use the categories-wrapper template created below -->
+        <!-- define categories to be featuredCategories created in the script above -->
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/categories-wrapper">
+    <!-- This creates a component template called 'categories wrapper' -->
+    <!-- All of this template code was adapted from Discourse's own categories page template
+     https://github.com/discourse/discourse/blob/acd1693dac1bff6ff50250d942134bc48a27ff14/app/assets/javascripts/discourse/templates/components/categories-only.hbs -->
+  
+    <div class="top-categories-wrapper">
+      {{#each categories as |c|}}
+          <div class="top-category-column-one">
+            {{category-title-link category=c}}
+            {{#if c.escription}}
+              <div class="category-description">
+                {{dir-span c.description}}
+              </div>
+            {{/if}}
+            {{#if c.isGrandParent}}
+              <table class="category-list subcategories-with-subcategories">
+                <tbody>
+                  {{#each c.subcategories as |subcategory|}}
+                    <tr
+                      data-category-id={{subcategory.id}}
+                      data-notification-level={{subcategory.notificationLevelString
+                      }}
+                      class="{{if
+                          subcategory.description_excerpt
+                          "has-description"
+                          "no-description"
+                        }}
+    
+                        {{if subcategory.uploaded_logo.url "has-logo" "no-logo"}}"
+                    >
+                      <td
+                        class="category"
+                        style={{border-color subcategory.color}}
+                      >
+                        {{category-title-link tagName="h4" category=subcategory}}
+                        {{#if subcategory.description_excerpt}}
+                          <div
+                            class="category-description subcategory-description"
+                          >
+                            {{{dir-span subcategory.description_excerpt}}}
+                          </div>
+                        {{/if}}
+                        {{#if subcategory.subcategories}}
+                          <div class="subcategories">
+                            {{#each subcategory.subcategories as |subsubcategory|
+                            }}
+                              {{#unless subsubcategory.isMuted}}
+                                <span class="subcategory">
+                                  {{category-title-before category=subsubcategory
+                                  }}
+                                  {{category-link subsubcategory hideParent="true"
+                                  }}
+                                </span>
+                              {{/unless}}
+                            {{/each}}
+                          </div>
+                        {{else if subcategory.description_excerpt}}
+                          <div
+                            class="category-description subcategory-description"
+                          >
+                            {{{dir-span subcategory.description_excerpt}}}
+                          </div>
+                        {{/if}}
+                      </td>
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            {{else if c.subcategories}}
+              <div class="subcategories">
+                {{#each c.subcategories as |subcategory|}}
+                  {{#unless subcategory.isMuted}}
+                    <span class="subcategory">
+                      {{category-title-before category=subcategory}}
+                      {{category-link subcategory hideParent="true"}}
+                      {{category-unread category=subcategory}}
+                    </span>
+                  {{/unless}}
+                {{/each}}
+              </div>
+            {{/if}}
+          </div>
+          <div class="top-category-column-two">
+            <span class="topics-header">
+              Topics
+            </span>
+            <span class="topics-count">
+              {{c.topic_count}}
+            </span>
+            {{category-unread category=c tagName="div" class="unread-new"}}
+          </div>
+      {{/each}}
+    </div>
+  </script>
