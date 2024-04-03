@@ -18,15 +18,13 @@ html {
     font-size: 1rem;
     font-weight: 700;
     height: 30px;
-    &:active {
+    svg {
         color: inherit;
-        .d-icon {
-            color: inherit;
-        }
     }
 }
 
-.btn-default {
+.btn-default,
+.btn-primary {
     background: var(--spectrum-global-color-static-blue-600);
     border-radius: var(--d-nav-pill-border-radius);
     color: var(--button-text-color-light);
@@ -52,32 +50,70 @@ html {
 }
 
 // HEADER 
+.d-header {
+    box-shadow: none;
+}
 .d-header #site-logo {
     height: 24px;
 }
 
 .d-header-icons {
     .icon {
-        color: var(--spectrum-global-color-static-gray-700);
+        color: var(---header-icon-color);
+        width: var(-font-up-2);
+        height: var(-font-up-2);
         img.avatar {
             width: var(-font-up-2);
             height: var(-font-up-2);
         }
     }
     .d-icon {
+        color: var(--header-icon-color);
         font-size: var(-font-up-2);
     }
 }
 
 // TOPIC-LIST
 .topic-list a.title {
+    color: var(--primary);
     font-size: var(--font-down-1);
     font-weight: 700;
 }
+.topic-list-item.visited .topic-list-data a.title:not(.badge-notification), 
+.latest-topic-list-item.visited a.title:not(.badge-notification), 
+.category-topic-link.visited a.title:not(.badge-notification) {
+    color: var(--primary);
+}
+
+// TAGS
+.discourse-tag {
+    border: 1px #ccc solid;
+    border-radius: 15px;
+    padding: 2px 8px;
+    line-height: 100%;
+}
+
+// TABLES 
+tr {
+    color: var(--primary); 
+}
+
+// RIGHT SIDE COMPONENT
+.rs-component {
+    h3 {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    .badge-category__wrapper {
+        color: var(--primary); 
+    }
+}
 
 // BANNER (Custom search)
+.search-banner {
+    margin-bottom: 2rem;
+}
 .custom-search-banner {
-    //background: #c49dfe url($bg-search-main);
     background: #c49dfe url($bg-search-main);
     background-size: cover;
     background-position: center;
