@@ -55,8 +55,8 @@ html, h1, h2, h3, h4, h5, h6 {
 }
 
 .d-header-mode .bootstrap-mode {
-    background: var(--love);
-    color: var(--primary);
+    background: var(--spectrum-global-color-static-gray-300);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
 }
 
@@ -71,16 +71,16 @@ html, h1, h2, h3, h4, h5, h6 {
 .d-header-icons {
     .icon {
         color: var(---header-icon-color);
-        width: var(-font-up-2);
-        height: var(-font-up-2);
+        width: var(--font-up-2);
+        height: var(--font-up-2);
         img.avatar {
-            width: var(-font-up-2);
-            height: var(-font-up-2);
+            width: var(--font-up-2);
+            height: var(--font-up-2);
         }
     }
     .d-icon {
         color: var(--header-icon-color);
-        font-size: var(-font-up-2);
+        font-size: var(--font-up-2);
     }
 }
 
