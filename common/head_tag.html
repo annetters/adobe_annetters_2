@@ -2,7 +2,7 @@
     const Category = require("discourse/models/category").default;
     // we will use the Category model to retrieve site categories
   
-    api.registerConnectorClass('above-main-container', 'featured-categories', {
+    api.renderInOutlet('above-main-container', 'featured-categories', {
       // above-main-container is the plugin outlet,
       // featured-topics is your custom component name
   
@@ -17,11 +17,14 @@
             $('html').addClass('custom-featured-categories');
             // add a class to the HTML tag for easy CSS targetting
   
-            let definedFeaturedCategories = ["uncategorized","blog","two"]
+            let definedFeaturedCategories = ["photoshop","acrobat","dreamweaver"]
             // array of categories you want to feature
             // be sure to put the category titles in lowercase
-  
+
+            console.log(definedFeaturedCategories);
+            
             let featuredCategories = [];
+
   
             categories = Category.list();
   
@@ -31,6 +34,9 @@
                 featuredCategories.push(cat)
               }
             }
+
+            console.log(featuredCategories);
+
   
             component.set('featuredCategories', featuredCategories)
   
