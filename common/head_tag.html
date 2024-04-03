@@ -2,7 +2,7 @@
     const Category = require("discourse/models/category").default;
     // we will use the Category model to retrieve site categories
   
-    api.renderInOutlet('above-main-container', 'featured-categories', {
+    api.registerConnectorClass('above-main-container', 'featured-categories', {
       // above-main-container is the plugin outlet,
       // featured-topics is your custom component name
   
