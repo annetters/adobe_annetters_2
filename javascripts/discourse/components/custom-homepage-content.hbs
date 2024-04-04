@@ -11,21 +11,7 @@
                         <div class="icon-container">
                             <div class="placeholder">&nbsp;</div>
                             <span>{{sc.uploaded_logo}}</span> 
-                            <span>{{sc.uploaded_logo}}</span> 
-
-                            <h6>test, each</h6>
-                            <span>
-                            {{#each sc.uploaded_logo}}
-                                {{#each this.url}}
-                                <h6>{{url}}</h6>
-                                {{/each}}
-                            {{/each}} 
-                            </span> 
-
-                            <h6>test, With</h6>
-                            {{#with sc.uploaded_logo[0].url.[0]}}
-                            <h6>{{url}}</h6>
-                            {{/with}}
+                            <span>{{sc.uploaded_logo.url}}</span> 
 
                             {{log sc.uploaded_logo}}
                             {{log sc.uploaded_logo.url}}
