@@ -13,6 +13,10 @@
                             <span>{{sc.uploaded_logo}}</span> 
                             <span>{{sc.uploaded_logo.url}}</span> 
 
+                            {{#if sc.uploaded_logo.url}}
+                                <h6>Url? {{sc.uploaded_logo.url}}</h6>
+                            {{/if}}
+
                             {{log sc.uploaded_logo}}
                             {{log sc.uploaded_logo.url}}
                         </div>
