@@ -11,13 +11,13 @@
                         <div class="icon-container">
                             <div class="placeholder">&nbsp;</div>
                             <span>{{sc.uploaded_logo}}</span> 
-                            <span>{{{sc.uploaded_logo}}}</span> 
                             <span>
                             {{#each sc.uploaded_logo}}
-                                {{this}}
+                                {{this.id}}
                             {{/each}} 
                             </span> 
                             {{log sc.uploaded_logo}}
+                            {{log sc.uploaded_logo.url}}
                         </div>
                         <div class="text-container">
                             <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
