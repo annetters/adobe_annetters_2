@@ -1,8 +1,8 @@
 :root {
-
-    // HEADER
+    // CORE
+    --primary: #222;
     --d-logo-height: 20px;
-    --header-icon-color: var(--spectrum-global-color-static-gray-700);
+    --header-icon-color: var(--brand-color-gray-700);
 
     // BUTTONS
     --d-nav-pill-border-radius: 1rem;
@@ -11,11 +11,16 @@
     --button-text-color-light: #fff;
     --button-text-color-dark: var(--primary);
 
-
     // COLORS
     // Base
     --text-color: var(--primary); 
+    --brand-color-gray-200: var(--spectrum-global-color-static-gray-200);
+    --brand-color-gray-300: var(--spectrum-global-color-static-gray-300);
+    --brand-color-gray-700: var(--spectrum-global-color-static-gray-700);
+    --brand-color-blue-600: var(--spectrum-global-color-static-blue-600);
+    --brand-color-blue-700: var(--spectrum-global-color-static-blue-700);
 
+    // KITCHEN SINK (customer vars)
     // Adobe Spectrum palette
     --spectrum-global-color-static-gray-50: white;
     --spectrum-global-color-static-gray-75: white;

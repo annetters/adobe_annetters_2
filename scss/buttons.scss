@@ -11,18 +11,18 @@
 
 .btn-default,
 .btn-primary {
-    background: var(--spectrum-global-color-static-blue-600);
+    background: var(--brand-color-blue-600);
     border-radius: var(--d-nav-pill-border-radius);
     color: var(--button-text-color-light);
     padding: 0.5rem 1rem;
     &:hover {
-        background: var(-spectrum-global-color-static-blue-700);
+        background: var(--brand-color-blue-600);
     }
 }
 .btn.login-button {
     background: transparent;
-    border: 2px var(--spectrum-global-color-static-gray-700) solid;
-    color: var(--spectrum-global-color-static-gray-700);
+    border: 2px var(--brand-color-gray-700) solid;
+    color: var(--brand-color-gray-700);
 }
 
 .nav-pills > li {
