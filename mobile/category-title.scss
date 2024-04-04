@@ -1,0 +1,13 @@
+/* CATEGORY TITLE HEADER (custom component) */
+/* mobile only css*/
+
+/* CATEGORY TITLE HEADER (custom component) */
+div[class^=category-title-header] { 
+    padding: 1rem 0;
+    .category-title-contents {
+        display: flex;
+        .category-logo {
+            margin-left: 0;
+        }
+    } 
+}
