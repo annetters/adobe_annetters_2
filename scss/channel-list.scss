@@ -1,0 +1,51 @@
+// CHANNEL LIST
+.channel-view-list {
+    .channel-view-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .channel-card {
+        background: var(--spectrum-global-color-static-gray-200) 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        margin-bottom: 32px;
+        max-width: 214px;
+        height: 82px;
+        overflow: hidden;
+        width: 214px;
+        margin-right: 24px;
+        transition: box-shadow 1s;
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+        .channel-card-content {
+            padding: 0.75rem;
+        }
+    }    
+    .row {
+        display: flex;
+        .icon-container {
+            margin-right: 12px;
+            width: 30px;
+            .placeholder {
+                background: gray;
+                border-radius: 5px;
+                height: 30px;
+                width: 30px;
+            }
+        }
+        .text-container {
+            .title {
+                font-size: var(--font-down-1);
+                color: #2C2C2C;
+                font-weight: 700;
+                margin: 0;
+                a {color: inherit;}
+            }
+            .stats {
+                font-size: var(--font-down-2);
+                font-weight: 300;
+            }
+        }
+    }
+}

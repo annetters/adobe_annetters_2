@@ -1,3 +1,24 @@
 {{#if this.isHomepage}}
-  <h1>This is my homepage HTML content</h1>
+    <section class="channel-view-list">
+        <div class="wrap">
+            <div class="channel-view-grid">
+        {{#each site.categories as |sc|}}
+        <div class="channel-card">
+            <div class="channel-card-content">
+                <div class="row">
+                    <div class="icon-container">
+                        <div class="placeholder">&nbsp;</div>
+                        <div>{{sc.uploaded_logo}}</div>  
+                    </div>
+                    <div class="text-container">
+                        <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
+                        <span class="stats">117.k conversations</span>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    </div>
+  </section>
 {{/if}}

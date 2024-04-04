@@ -1,1 +1,12 @@
 /* TYPOGRAPHY */
+
+// FONTS
+@font-face {
+    font-family: "adobe-clean";
+    src: url($font-adobe-clean) format("opentype");
+}
+
+
+html {
+    font-size: 16px;
+}
