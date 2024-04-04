@@ -1,0 +1,28 @@
+/* HEADER */
+
+.d-header {
+    box-shadow: none;
+}
+.d-header #site-logo {
+    height: 24px;
+}
+
+.d-header .header-buttons {
+    margin-top: 0;
+}
+
+.d-header-icons {
+    .icon {
+        color: var(---header-icon-color);
+        width: var(--font-up-2);
+        height: var(--font-up-2);
+        img.avatar {
+            width: var(--font-up-2);
+            height: var(--font-up-2);
+        }
+    }
+    .d-icon {
+        color: var(--header-icon-color);
+        font-size: var(--font-up-2);
+    }
+}

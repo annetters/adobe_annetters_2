@@ -1,11 +1,17 @@
-// CHANNEL LIST
-.channel-view-list {
+/* CHANNEL LIST COMPONENT */
+.channel-view-component {
+    .wrap {
+        max-width: 960px !important;
+    }
+    .channel-view-title {margin-bottom: 1.5rem;}
     .channel-view-grid {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1110px;
     }
     .channel-card {
         background: var(--spectrum-global-color-static-gray-200) 0% 0% no-repeat padding-box;
@@ -24,28 +30,29 @@
     }    
     .row {
         display: flex;
-        .icon-container {
-            margin-right: 12px;
+    }
+    .icon-container {
+        margin-right: 12px;
+        width: 30px;
+        .placeholder {
+            background: gray;
+            border-radius: 5px;
+            height: 30px;
             width: 30px;
-            .placeholder {
-                background: gray;
-                border-radius: 5px;
-                height: 30px;
-                width: 30px;
-            }
         }
-        .text-container {
-            .title {
-                font-size: var(--font-down-1);
-                color: #2C2C2C;
-                font-weight: 700;
-                margin: 0;
-                a {color: inherit;}
-            }
-            .stats {
-                font-size: var(--font-down-2);
-                font-weight: 300;
-            }
+    }
+    .text-container {
+        .title {
+            font-size: var(--font-down-1);
+            color: #2C2C2C;
+            font-weight: 700;
+            margin: 0;
+            text-transform: capitalize;
+            a {color: inherit;}
+        }
+        .stats {
+            font-size: var(--font-down-2);
+            font-weight: 300;
         }
     }
 }

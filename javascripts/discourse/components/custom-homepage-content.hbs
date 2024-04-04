@@ -1,24 +1,25 @@
 {{#if this.isHomepage}}
-    <section class="channel-view-list">
+    <section class="channel-view-component">
         <div class="wrap">
+            <h2 class="channel-view-title">More to discover</h2>
             <div class="channel-view-grid">
-        {{#each site.categories as |sc|}}
-        <div class="channel-card">
-            <div class="channel-card-content">
-                <div class="row">
-                    <div class="icon-container">
-                        <div class="placeholder">&nbsp;</div>
-                        <div>{{sc.uploaded_logo}}</div>  
+            {{#each site.categories as |sc|}}
+            <div class="channel-card">
+                <div class="channel-card-content">
+                    <div class="row">
+                        <div class="icon-container">
+                            <div class="placeholder">&nbsp;</div>
+                            <div>{{sc.uploaded_logo}}</div>  
+                        </div>
+                        <div class="text-container">
+                            <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
+                            <span class="stats">117.k conversations</span>
+                        </div>
                     </div>
-                    <div class="text-container">
-                        <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
-                        <span class="stats">117.k conversations</span>
-                    </div>
-                </div>      
+                </div>
             </div>
+            {{/each}}
         </div>
-        {{/each}}
-    </div>
     </div>
   </section>
 {{/if}}

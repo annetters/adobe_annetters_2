@@ -1,0 +1,15 @@
+/* CATEGORY TITLE HEADER (custom component) */
+div[class^=category-title-header] { 
+    background: var(--spectrum-global-color-static-gray-300) !important;
+    color: var(--primary) !important;
+    padding: 1.75rem 0;
+    div[class^=category-title-header] .category-title-contents {
+        max-width: var(--d-max-width);
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 var(--d-wrap-padding-h);
+        .category-logo {
+            max-height: 48px;
+        }
+    } 
+}
