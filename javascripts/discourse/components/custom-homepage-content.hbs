@@ -1,4 +1,5 @@
 {{#if this.isHomepage}}
+
     <section class="channel-view-component">
         <div class="wrap">
             <h2 class="channel-view-title">More to discover</h2>
@@ -10,11 +11,13 @@
                         <div class="icon-container">
                             <div class="placeholder">&nbsp;</div>
                             <span>{{sc.uploaded_logo}}</span> 
+                            <span>{{{sc.uploaded_logo}}}</span> 
                             <span>
                             {{#each sc.uploaded_logo}}
-                                {{@key}}: {{this}}
-                            {{/each}}
+                                {{this}}
+                            {{/each}} 
                             </span> 
+                            {{log sc.uploaded_logo}}
                         </div>
                         <div class="text-container">
                             <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
