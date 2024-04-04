@@ -9,7 +9,12 @@
                     <div class="row">
                         <div class="icon-container">
                             <div class="placeholder">&nbsp;</div>
-                            <div>{{sc.uploaded_logo}}</div>  
+                            <span>{{sc.uploaded_logo}}</span> 
+                            <span>
+                            {{#each sc.uploaded_logo}}
+                                {{@key}}: {{this}}
+                            {{/each}}
+                            </span> 
                         </div>
                         <div class="text-container">
                             <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>

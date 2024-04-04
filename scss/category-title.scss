@@ -4,12 +4,14 @@ div[class^=category-title-header] {
     color: var(--primary) !important;
     padding: 1.75rem 0;
     .category-title-contents {
+        @extend .wrap;
         max-width: var(--d-max-width);
         margin-right: auto;
         margin-left: auto;
         padding: 0 var(--d-wrap-padding-h);
         .category-logo {
             max-height: 48px;
+            max-width: 48px;
         }
     } 
 }
