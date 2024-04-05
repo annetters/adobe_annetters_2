@@ -1,5 +1,8 @@
 {
   "private": true,
+  "dependencies": {
+    "@babel/@babel/plugin-proposal-decorators": "^7.24.0"
+  },
   "devDependencies": {
     "@discourse/lint-configs": "^1.3.7",
     "ember-template-lint": "^5.13.0",

@@ -1,44 +1,44 @@
 {{#if this.isHomepage}}
+  <section class="channel-view-component">
+    <div class="wrap">
+      <h2 class="channel-view-title">More to discover</h2>
+      <div class="channel-view-grid">
+        {{#each site.categories as |sc|}}
+          <div class="channel-card">
+            <div class="channel-card-content">
+              <div class="row">
+                <div class="icon-container">
+                  <div class="placeholder">&nbsp;</div>
+                  <span>{{sc.uploaded_logo}}</span>
+                  <span>{{sc.uploaded_logo.url}}</span>
 
-    <section class="channel-view-component">
-        <div class="wrap">
-            <h2 class="channel-view-title">More to discover</h2>
-            <div class="channel-view-grid">
-            {{#each site.categories as |sc|}}
-            <div class="channel-card">
-                <div class="channel-card-content">
-                    <div class="row">
-                        <div class="icon-container">
-                            <div class="placeholder">&nbsp;</div>
-                            <span>{{sc.uploaded_logo}}</span> 
-                            <span>{{sc.uploaded_logo.url}}</span> 
+                  {{#if sc.uploaded_logo.url}}
+                    <h6>Loop in again? {{sc.uploaded_logo.url}}</h6>
+                  {{/if}}
 
-                            {{#if sc.uploaded_logo.url}}
-                                <h6>Loop in again? {{sc.uploaded_logo.url}}</h6>
-                            {{/if}}
-
-
-                            {{log sc.uploaded_logo}}
-                            {{log sc.uploaded_logo.url}}
-                        </div>
-                        <div class="text-container">
-                            <h5 class="title"><a href={{sc.topic_url}}>{{sc.slug}}</a></h5>
-                            <span class="stats">117.k conversations</span>
-                        </div>
-                    </div>
+                  {{log sc.uploaded_logo}}
+                  {{log sc.uploaded_logo.url}}
                 </div>
+                <div class="text-container">
+                  <h5 class="title"><a
+                      href={{sc.topic_url}}
+                    >{{sc.slug}}</a></h5>
+                  <span class="stats">117.k conversations</span>
+                </div>
+              </div>
             </div>
-            {{/each}}
-        </div>
+          </div>
+        {{/each}}
+      </div>
     </div>
   </section>
 
   <section class="learn-more-component">
     <div class="wrap">
-        <h2 class="channel-view-title">More to discover</h2>
-        <div class="card-list">
-            <p>Placeholder for card-list.</p>
-        </div>
+      <h2 class="channel-view-title">More to discover</h2>
+      <div class="card-list">
+        <p>Placeholder for card-list.</p>
+      </div>
     </div>
   </section>
 {{/if}}
