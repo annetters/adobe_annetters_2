@@ -8,16 +8,17 @@
             <div class="channel-card-content">
               <div class="row">
                 <div class="icon-container">
-                  <div class="placeholder">&nbsp;</div>
-                  <span>{{sc.uploaded_logo}}</span>
-                  <span>{{sc.uploaded_logo.url}}</span>
 
-                  {{#if sc.uploaded_logo.url}}
-                    <h6>Loop in again? {{sc.uploaded_logo.url}}</h6>
-                  {{/if}}
+                  <a href={{sc.topic_url}}>
+                    {{#if sc.uploaded_logo.url}}
+                      <img src={{sc.uploaded_logo.url}} alt="category logo" />
+                    {{else}}
+                      <div class="placeholder">
+                        &nbsp;
+                      </div>
+                    {{/if}}
+                  </a>
 
-                  {{log sc.uploaded_logo}}
-                  {{log sc.uploaded_logo.url}}
                 </div>
                 <div class="text-container">
                   <h5 class="title"><a

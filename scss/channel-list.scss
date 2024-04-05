@@ -1,58 +1,68 @@
 /* CHANNEL LIST COMPONENT */
 .channel-view-component {
-    .wrap {
-        max-width: 960px !important;
+  .wrap {
+    max-width: 960px !important;
+  }
+  .channel-view-title {
+    margin-bottom: 1.5rem;
+  }
+  .channel-view-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1110px;
+  }
+  .channel-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    max-width: 214px;
+    height: 82px;
+    overflow: hidden;
+    width: 214px;
+    margin-right: 24px;
+    transition: box-shadow 1s;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    .channel-card-content {
+      padding: 0.75rem;
     }
-    .channel-view-title {margin-bottom: 1.5rem;}
-    .channel-view-grid {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        max-width: 1110px;
+  }
+  .row {
+    display: flex;
+  }
+  .icon-container {
+    margin-right: 12px;
+    width: 30px;
+    img {
+      max-width: 30px;
     }
-    .channel-card {
-        background: var(--brand-color-gray-200) 0% 0% no-repeat padding-box;
-        border-radius: 10px;
-        margin-bottom: 32px;
-        max-width: 214px;
-        height: 82px;
-        overflow: hidden;
-        width: 214px;
-        margin-right: 24px;
-        transition: box-shadow 1s;
-        box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
-        .channel-card-content {
-            padding: 0.75rem;
-        }
-    }    
-    .row {
-        display: flex;
+    .placeholder {
+      background: gray;
+      border-radius: 5px;
+      height: 30px;
+      width: 30px;
     }
-    .icon-container {
-        margin-right: 12px;
-        width: 30px;
-        .placeholder {
-            background: gray;
-            border-radius: 5px;
-            height: 30px;
-            width: 30px;
-        }
+  }
+  .text-container {
+    line-height: 17px;
+    position: relative;
+    top: -3px;
+    .title {
+      font-size: var(--base-font-size-smaller);
+      color: #2c2c2c;
+      font-weight: 700;
+      margin: 0;
+      text-transform: capitalize;
+      a {
+        color: inherit;
+      }
     }
-    .text-container {
-        .title {
-            font-size: var(--font-down-1);
-            color: #2C2C2C;
-            font-weight: 700;
-            margin: 0;
-            text-transform: capitalize;
-            a {color: inherit;}
-        }
-        .stats {
-            font-size: var(--font-down-2);
-            font-weight: 300;
-        }
+    .stats {
+      font-size: var(--font-down-2);
+      font-weight: 300;
     }
+  }
 }
