@@ -9,7 +9,7 @@
               <div class="row">
                 <div class="icon-container">
 
-                  <a href={{sc.topic_url}}>
+                  <a href={{sc.slug}}>
                     {{#if sc.uploaded_logo.url}}
                       <img src={{sc.uploaded_logo.url}} alt="category logo" />
                     {{else}}
@@ -18,13 +18,18 @@
                       </div>
                     {{/if}}
                   </a>
-
                 </div>
                 <div class="text-container">
                   <h5 class="title"><a
-                      href={{sc.topic_url}}
-                    >{{sc.slug}}</a></h5>
-                  <span class="stats">117.k conversations</span>
+                      href="/c/{{sc.slug}}"
+                    >{{sc.name}}</a></h5>
+
+                  {{#if sc.topic_count}}
+                    <span class="stats">{{sc.topic_count}} conversations</span>
+                  {{else}}
+                    <span class="stats">No conversations</span>
+                  {{/if}}
+
                 </div>
               </div>
             </div>
@@ -36,7 +41,7 @@
 
   <section class="learn-more-component">
     <div class="wrap">
-      <h2 class="channel-view-title">More to discover</h2>
+      <h2 class="channel-view-title">Learn with Adobe</h2>
       <div class="card-list">
         <p>Placeholder for card-list.</p>
       </div>
