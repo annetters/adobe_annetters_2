@@ -15,9 +15,7 @@
         width: 50%;
         padding: 0 0.75rem;
         height: 50px;
-        margin-top: 10px;
         border-left: 1px solid #e1e1e1;
-        margin-bottom: 10px;
         display: flex;
         flex-direction: column;
         padding-top: 3px;
@@ -45,6 +43,7 @@
       list-style: none;
       margin: 0;
       li {
+        font-weight: 700;
         margin-bottom: 0.5rem;
         &:last-child {
           margin-bottom: 0;
@@ -69,12 +68,21 @@
       align-items: center;
       padding-bottom: 0.5rem;
     }
+    .col-2 {
+      padding-left: 12px;
+    }
     .card-title,
     .card-subtitle {
       font-size: var(--font-down-1);
     }
     .card-title {
       font-weight: bold;
+      p {
+        margin: 0;
+      }
+      a {
+        color: var(--brand-color-gray-700);
+      }
     }
     .card-subtitle {
       color: var(--brand-color-gray-700);
