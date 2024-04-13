@@ -8,7 +8,6 @@
             <div class="channel-card-content">
               <div class="row">
                 <div class="icon-container">
-
                   <a href={{sc.slug}}>
                     {{#if sc.uploaded_logo.url}}
                       <img src={{sc.uploaded_logo.url}} alt="category logo" />
@@ -24,7 +23,9 @@
                       href="/c/{{sc.slug}}"
                     >{{sc.name}}</a></h5>
 
-                  <span class="stats">{{sc.topic_count}} conversations</span>
+                  {{#if sc.topic_count}}{{else}}
+                    <span class="stats">No conversations</span>
+                  {{/if}}
 
                 </div>
               </div>

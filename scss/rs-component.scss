@@ -1,11 +1,51 @@
 /* RIGHT SIDE COMPONENT */
 
 .rs-component {
-    h3 {
-        border-bottom: 0;
-        padding-bottom: 0;
+  h3 {
+    border-bottom: 0;
+    font-size: var(--font-up-1);
+    padding-bottom: 0;
+  }
+  .badge-category__wrapper {
+    color: var(--primary);
+  }
+  #rc-stats {
+    .row {
+      display: flex;
+      flex-direction: row;
+      .column {
+        width: 50%;
+        padding-left: 10px;
+        height: 50px;
+        margin-top: 10px;
+        border-left: 1px solid #e1e1e1;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
     }
-    .badge-category__wrapper {
-        color: var(--primary); 
+    .stat-key {
+      color: var(--brand-color-gray-700);
+      font-size: var(--font-down-1);
     }
+    .stat-value {
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
+  #resources {
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        margin-bottom: 0.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
