@@ -1,9 +1,10 @@
 /* RIGHT SIDE COMPONENT */
 
-.rs-component {
-  h3 {
+.rc-custom-section {
+  margin-bottom: 2rem;
+  .rc-heading {
     border-bottom: 0;
-    font-size: var(--font-up-1);
+    font-size: var(--font-up-2);
     padding-bottom: 0;
   }
   .badge-category__wrapper {
@@ -15,7 +16,7 @@
       flex-direction: row;
       .column {
         width: 50%;
-        padding-left: 10px;
+        padding: 0 0.75rem;
         height: 50px;
         margin-top: 10px;
         border-left: 1px solid #e1e1e1;
@@ -24,6 +25,12 @@
         flex-direction: column;
         padding-top: 3px;
         padding-bottom: 3px;
+        &.col-1 {
+          width: 75%;
+        }
+        &.col-2 {
+          width: 25%;
+        }
       }
     }
     .stat-key {
@@ -46,6 +53,17 @@
           margin-bottom: 0;
         }
       }
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0.5rem;
+    }
+    .card-title {
+      color: var(--brand-color-gray-700);
+      font-size: var(--font-down-1);
+      font-weight: bold;
     }
   }
 }
