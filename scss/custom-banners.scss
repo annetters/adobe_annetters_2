@@ -1,0 +1,125 @@
+.gray-banner-component {
+  background: var(--brand-color-gray-200);
+  margin-bottom: 1.5rem;
+  .wrap {
+    max-width: 960px !important;
+    padding: 1.5rem 0;
+  }
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(tablet, min-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .card {
+      width: 288px;
+      min-width: 288px;
+      height: 155px;
+      background: #fff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      transition: box-shadow 1s;
+      position: relative;
+      .card-bg {
+        background: gray url("https://picsum.photos/id/13/288/61");
+        height: 61px;
+        border-radius: 10px 10px 0 0;
+      }
+      .icon-container {
+        height: 28px;
+        width: 28px;
+        position: absolute;
+        top: 40px;
+        left: 1rem;
+        > img {
+          border: 1px white solid;
+          border-radius: 5px;
+          max-width: 100%;
+        }
+      }
+      .text-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        .column {
+          .button {
+            display: block;
+          }
+        }
+        .title {
+          font-size: var(--font-up-1);
+          margin: 0;
+          a {
+            color: var(--primary);
+          }
+        }
+        .stats {
+          font-size: var(--font-down-1);
+        }
+      }
+    }
+  }
+}
+
+// FOR YOU component
+
+// SEARCH BANNER (Custom component overrides)
+.search-banner {
+  margin-bottom: 2rem;
+}
+.custom-search-banner {
+  background: #c49dfe url($bg-search-main);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  height: 250px;
+  h1 {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+  p {
+    margin: 1rem 0 0;
+  }
+  .search-menu {
+    max-width: 408px;
+  }
+  .search-input {
+    height: 33px;
+    border: none;
+    padding: 0 2rem 0 1rem;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+    opacity: 1;
+    ::placeholder {
+      color: var(--spectrum-global-color-static-gray-600);
+      font-style: italic;
+    }
+  }
+  .stats-strip {
+    display: flex;
+    font-size: var(--font-down-1);
+    justify-content: center;
+    .stats-label + .stats-label {
+      margin-left: 1.5rem;
+    }
+  }
+  // item positioning hackery
+  .custom-search-banner-wrap {
+    display: flex;
+    flex-direction: column;
+    :nth-child(1) {
+      order: 1;
+    }
+    :nth-child(2) {
+      order: 3;
+    }
+    :nth-child(3) {
+      margin: initial;
+      order: 2;
+    }
+  }
+}

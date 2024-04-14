@@ -9,11 +9,14 @@
   .channel-view-grid {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1110px;
+    @include breakpoint(tablet, min-width) {
+      justify-content: flex-start;
+    }
   }
   .channel-card {
     background: #f9f9f9;
@@ -21,11 +24,28 @@
     margin-bottom: 32px;
     max-width: 214px;
     height: 82px;
+    width: 45%;
+    margin-right: 5%;
     overflow: hidden;
-    width: 214px;
-    margin-right: 24px;
     transition: box-shadow 1s;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    &:nth-child(2n + 0) {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+      //cursor: pointer;
+    }
+    @include breakpoint(tablet, min-width) {
+      width: 214px;
+      margin-right: 24px;
+      &:nth-child(2n + 0) {
+        margin-right: 24px;
+      }
+      &:nth-child(4n + 0) {
+        margin-right: 0;
+      }
+    }
     .channel-card-content {
       padding: 0.75rem;
     }

@@ -1,48 +1,61 @@
 /* BUTTONS */
 .btn {
-    color: var(--button-text-color-dark);
-    font-size: 1rem;
-    font-weight: 700;
-    height: 30px;
-    .d-icon {
-        color: inherit;
-    }
+  color: var(--button-text-color-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  height: 30px;
+  .d-icon {
+    color: inherit;
+  }
 }
 
 .btn-default,
 .btn-primary {
+  background: var(--brand-color-blue-600);
+  border-radius: var(--d-nav-pill-border-radius);
+  color: var(--button-text-color-light);
+  padding: 0.5rem 1rem;
+  &:hover {
     background: var(--brand-color-blue-600);
-    border-radius: var(--d-nav-pill-border-radius);
-    color: var(--button-text-color-light);
-    padding: 0.5rem 1rem;
-    &:hover {
-        background: var(--brand-color-blue-600);
-    }
+  }
 }
 .btn.login-button {
-    background: transparent;
-    border: 2px var(--brand-color-gray-700) solid;
-    color: var(--brand-color-gray-700);
+  background: transparent;
+  border: 2px var(--brand-color-gray-700) solid;
+  color: var(--brand-color-gray-700);
+}
+.btn-visit {
+  background: var(--primary);
+  color: white;
+  &:visited,
+  &:active {
+    color: white;
+  }
 }
 
 .nav-pills > li {
-    align-items: center;
-    > a {
-        @extend .btn;
-    }
+  align-items: center;
+  > a {
+    @extend .btn;
+  }
 }
-.nav-pills>li a {
-    background: transparent;
-    color: var(--text-color);
+.nav-pills > li a {
+  background: transparent;
+  color: var(--text-color);
 }
-.nav-pills>li a.active, 
-.nav-pills>li button.active {
-    background: var(--spectrum-global-color-static-gray-300);
-    color: var(--text-color);
+.nav-pills > li a.active,
+.nav-pills > li button.active {
+  background: var(--spectrum-global-color-static-gray-300);
+  color: var(--text-color);
 }
 
 .d-header-mode .bootstrap-mode {
-    background: var(--spectrum-global-color-static-gray-300);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
+  background: var(--spectrum-global-color-static-gray-300);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+
+// Button: Post to Community
+.fk-d-button-tooltip {
+  align-items: start;
 }

@@ -81,7 +81,10 @@
         margin: 0;
       }
       a {
-        color: var(--brand-color-gray-700);
+        color: var(--primary);
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     .card-subtitle {
