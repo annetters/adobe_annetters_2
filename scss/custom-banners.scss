@@ -8,6 +8,7 @@
   .card-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     @include breakpoint(tablet, min-width) {
       flex-direction: row;
       justify-content: space-between;
@@ -21,6 +22,7 @@
       border-radius: 10px;
       transition: box-shadow 1s;
       position: relative;
+      margin-bottom: 1rem;
       .card-bg {
         background: gray url("https://picsum.photos/id/13/288/61");
         height: 61px;
@@ -44,7 +46,7 @@
         justify-content: space-between;
         padding: 1rem;
         .column {
-          .button {
+          .btn {
             display: block;
           }
         }
