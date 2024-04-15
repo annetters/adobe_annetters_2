@@ -12,3 +12,8 @@ export default class CustomHomepageContent extends Component {
     return currentRouteName === `discovery.${defaultHomepage()}`;
   }
 }
+
+// Shameful way of moving this component above the search component
+const component1 = document.getElementsByClassName("custom-homepage-connector");
+const component2 = document.getElementsByClassName("search-banner");
+component1.append(component2);

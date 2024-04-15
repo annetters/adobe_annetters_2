@@ -18,3 +18,16 @@ tr {
   border-radius: 50%;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
 }
+
+// Hack to swap default positioning when plugin outlet is shared
+#main > div {
+  display: flex;
+  flex-direction: column;
+
+  .below-site-header-outlet {
+    order: -2;
+    & + .below-site-header-outlet {
+      order: -1;
+    }
+  }
+}
