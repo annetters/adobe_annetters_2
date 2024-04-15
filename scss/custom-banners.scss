@@ -64,3 +64,64 @@
     }
   }
 }
+
+// FOR YOU component
+
+// SEARCH BANNER (Custom component overrides)
+.search-banner {
+  margin-bottom: 2rem;
+}
+.custom-search-banner {
+  background: #c49dfe url($bg-search-main);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  height: 250px;
+  h1 {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+  p {
+    margin: 1rem 0 0;
+  }
+  .search-menu {
+    max-width: 408px;
+  }
+  .search-input {
+    height: 33px;
+    border: none;
+    padding: 0 2rem 0 1rem;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+    opacity: 1;
+    ::placeholder {
+      color: var(--spectrum-global-color-static-gray-600);
+      font-style: italic;
+    }
+  }
+  .stats-strip {
+    display: flex;
+    font-size: var(--font-down-1);
+    justify-content: center;
+    .stats-label + .stats-label {
+      margin-left: 1.5rem;
+    }
+  }
+  // item positioning hackery
+  .custom-search-banner-wrap {
+    display: flex;
+    flex-direction: column;
+    :nth-child(1) {
+      order: 1;
+    }
+    :nth-child(2) {
+      order: 3;
+    }
+    :nth-child(3) {
+      margin: initial;
+      order: 2;
+    }
+  }
+}
