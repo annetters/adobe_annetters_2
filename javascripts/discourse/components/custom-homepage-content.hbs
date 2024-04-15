@@ -56,7 +56,7 @@
             </div>
             <div class="column col-2"><a
                 href="/c/photoshop"
-                class="button btn-default btn-visit"
+                class="btn btn-default btn-visit"
               >Visit</a></div>
           </div>
         </div>
@@ -88,7 +88,9 @@
                       href="/c/{{sc.slug}}"
                     >{{sc.name}}</a></h5>
 
-                  {{#if sc.topic_count}}{{else}}
+                  {{#if sc.topic_count}}
+                    <span class="stats">{{sc.topic_count}} conversations</span>
+                  {{else}}
                     <span class="stats">No conversations</span>
                   {{/if}}
 
