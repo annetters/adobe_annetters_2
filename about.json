@@ -8,8 +8,15 @@
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {
+    "bg-search-main": "assets/images/bg-adobe-search.svg",
+    "bg-card-learn": "assets/images/bg-card-learn.svg",
+    "bg-card-help": "assets/images/bg-card-help.svg",
+    "bg-card-discover": "assets/images/bg-card-discover.svg",
+    "bg-card-behance": "assets/images/bg-card-behance.jpg",
+    "bg-card-lightroom": "assets/images/bg-card-lightroom.jpg",
+    "bg-card-adobe-live": "assets/images/bg-card-adobe-live.jpg",
     "font-adobe-clean": "assets/fonts/AdobeClean-Regular.otf",
-    "bg-search-main": "assets/images/adobe-search-bg.svg"
+    "icon-external-link": "assets/images/icon-external-link.svg"
   },
   "color_schemes": {
     "Default": {
@@ -18,14 +25,13 @@
       "tertiary": "2680eb",
       "quaternary": "2680eb",
       "header_background": "ffffff",
-      "header_primary": "2c2c2c", 
+      "header_primary": "2c2c2c",
       "highlight": "ffff4d",
       "danger": "d7373f",
       "success": "33ab84",
       "love": "fd83fa"
     }
   },
-  "modifiers": {
-  },
+  "modifiers": {},
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
 }

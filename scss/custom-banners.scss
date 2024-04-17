@@ -5,6 +5,10 @@
     max-width: 960px !important;
     padding: 1.5rem 0;
   }
+  .banner-title {
+    font-size: var(--font-up-2);
+    margin-bottom: 1rem;
+  }
   .card-list {
     display: flex;
     flex-direction: column;
@@ -61,6 +65,74 @@
           font-size: var(--font-down-1);
         }
       }
+    }
+  }
+}
+
+// Banner: Learn with Adobe
+.card-list.list-learn-more {
+  .card {
+    height: 265px;
+    min-width: 288px;
+    position: relative;
+    width: 288px;
+    transition: box-shadow 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    a {
+      color: var(--primary);
+    }
+    &.card-dark-bg {
+      color: white;
+      a {
+        color: white;
+      }
+    }
+    &.card-learn {
+      background-color: #fdbefc;
+      background-image: url($bg-card-learn);
+    }
+    &.card-help {
+      background-color: #a4ecf7;
+      background-image: url($bg-card-help);
+    }
+    &.card-discover {
+      background-color: #b8ee92;
+      background-image: url($bg-card-discover);
+    }
+    &.card-behance {
+      background-color: #583fd8;
+      background-image: url($bg-card-behance);
+    }
+    &.card-lightroom {
+      background-color: #fbeed4;
+      background-image: url($bg-card-lightroom);
+    }
+    &.card-adobe-live {
+      background-color: #ff7e06;
+      background-image: url($bg-card-adobe-live);
+    }
+    .icon-external-link {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .text-container {
+      display: block;
+      padding: 20px;
+      .title {
+        font-size: var(--font-down-1);
+        margin: 0;
+      }
+      p {
+        font-size: var(--font-down-1);
+      }
+    }
+    small {
+      position: absolute;
+      bottom: 10px;
     }
   }
 }

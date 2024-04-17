@@ -27,6 +27,8 @@
 .btn-visit {
   background: var(--primary);
   color: white;
+  padding: 0 1rem;
+  line-height: 28px;
   &:visited,
   &:active {
     color: white;
